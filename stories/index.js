@@ -17,6 +17,7 @@ import Status from "components/Appointment/Status";
 import Error from "components/Appointment/Error";
 import Form from "components/Appointment/Form"
 import { act } from "@testing-library/react";
+import { Fragment } from 'react'
 
 storiesOf("Button", module)
   .addParameters({
@@ -182,7 +183,7 @@ storiesOf("Appointment", module)
   .add("Edit", () => (
     <Form 
     student = 'Justin'
-    interviewer = '2'
+    interviewer = {2}
     interviewers = {interviewers}
     onSave={action('onSave')}
     onCancel= {action('onCancel')}/>
@@ -193,4 +194,21 @@ storiesOf("Appointment", module)
     onSave={action('onSave')}
     onCancel= {action('onCancel')}
     />
-    ));
+    ))
+  .add("Appointment Empty", () => (
+    <Fragment>
+      <Appointment id={1} time="4pm" />
+      <Appointment time="5pm" />
+    </Fragment>
+  ))
+  .add("Appointment Booked", () => (
+    <Fragment>
+      <Appointment
+        id={1}
+        time="4pm"
+        interview={{ student: "Lydia Miller-Jones", interviewer }}
+      />
+      <Appointment time="5pm" />
+    </Fragment>
+  ))
+  

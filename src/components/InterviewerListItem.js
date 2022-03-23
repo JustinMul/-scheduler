@@ -7,7 +7,6 @@ export function InterviewerListItem(props) {
 const liClass = (classNames('interviewers__item-image', {'interviewers__item--selected': props.selected === true}))
 
 
-
   return (
 <li className={liClass} onClick = {props.setInterviewer}>
   <img
