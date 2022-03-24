@@ -15,7 +15,7 @@ export default function Appointment(props) {
   return (
     <Fragment>
     <Header time={props.time}/>    
-    <div className='appointment'>{response}</div>
+    <div className='appointment'>{response} interview</div>
     </Fragment>
   );
 }
