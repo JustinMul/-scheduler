@@ -36,10 +36,8 @@ export function getInterviewersForDay(state, day) {
 }
 
 
-
-
 export function getInterview(state,interview) {
-console.log('this is interview', interview)
+
 let interviewData = {};
 if(interview !== null){
   const interviewerID = interview.interviewer;
