@@ -7,21 +7,27 @@ import Empty from "./Empty";
 import useVisualMode from "hooks/useVisualMode";
 import Form from "./Form";
 
+
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE"
 
 export default function Appointment(props) {
-  
-  // let response = (props.interview ? <Show student={props.interview.student} interviewer={props.interview.interviewer}/> :<Empty/>)
-  
+
+ 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
-
-
-  // (props.time ===undefined? 'No Appointments' : 'Appointment at ' + props.time)
   
+
+  function save(name, interviewer) {
+    const interview = {
+      student: name,
+      interviewer
+    };
+    console.log(props.id, interview)
+    props.bookInterview(props.id, interview)
+  }
   
   return (
     <Fragment>
@@ -31,10 +37,14 @@ export default function Appointment(props) {
     {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
         {mode === SHOW && (
           <Show
+
             student={props.interview.student}
             interviewer={props.interview.interviewer}
+
           />
-      )}{mode === CREATE && (<Form interviewers={[]} onCancel={()=> back()} />)}
+      )}{mode === CREATE && (<Form interviewers={props.interviewers} onCancel={()=> back()} 
+      onSave={save}
+      />)}
     </Fragment>
   );
 }

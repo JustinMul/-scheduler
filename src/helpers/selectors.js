@@ -14,34 +14,32 @@ export function getAppointmentsForDay(state, day) {
 }
 
 export function getInterviewersForDay(state, day) {
-  // console.log(state)
-  console.log('this is state', state)
-  console.log(state.days)
-  console.log('this is appointments ', state.appointments)
+
   let interviewerArray = []
-  state.days.map((dayObject) => {
+  if(state.days.length === 0) {
+    return []
+  }
+  state.days.filter((dayObject)=> {
     if (dayObject.name === day) {
-     let dayId = dayObject.appointments;
-      dayId.map((appointmentId) => {
-      // console.log('this is the id', appointmentId)
-      // console.log('this is state.appointmen{id}', state.appointments[appointmentId])
-      const interviewID = state.appointments[appointmentId].interview
-      // console.log('this is intervierw id', interviewID)
-     if(state.appointments[appointmentId].interview!== null){
-      //  console.log('yes')
-      //  console.log('this is what is being pushed into the array', state.interviewers[interviewID.interviewer])
-      interviewerArray.push(state.interviewers[interviewID.interviewer])
-     }
-    })
-    }
-  })
+         let dayId = dayObject.interviewers;
+          dayId.filter((interviewer) => {
+         if(interviewer.id === state.interviewers.id){
+          interviewerArray.push(state.interviewers[interviewer])
+         }
+        })
+        }
+  });
+  
   return interviewerArray;
+
+
 }
 
 
 
-export function getInterview(state,interview) {
 
+export function getInterview(state,interview) {
+console.log('this is interview', interview)
 let interviewData = {};
 if(interview !== null){
   const interviewerID = interview.interviewer;
