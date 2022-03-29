@@ -35,7 +35,7 @@ export default function Appointment(props) {
       interviewer
     };
     transition(SAVING)
-    props.bookInterview(props.id, interview).then(()=> transition(SHOW))
+    props.bookInterview(props.id, interview).then(()=> transition(SHOW)).catch(error => transition(ERROR_SAVE, true));
     
   }
 
@@ -44,8 +44,8 @@ export default function Appointment(props) {
       student: null,
       interviewer:null
     };
-    transition(DELETE)
-    props.cancelInterview(props.id, interview).then(()=> transition(EMPTY))
+    transition(DELETE,true)
+    props.cancelInterview(props.id, interview).then(()=> transition(EMPTY)).catch(error => transition(ERROR_DELETE, true));
     
   }
   
@@ -54,10 +54,11 @@ export default function Appointment(props) {
   }
 
   function edit() {
-    console.log(props)
+    
     transition(EDIT)
   }
 
+  
   return (
     <Fragment>
       
@@ -76,8 +77,8 @@ export default function Appointment(props) {
     {mode === DELETE && <Status message="Deleting"/>}
     {mode === CONFIRM && <Confirm onCancel={()=> back()} onConfirm = {deleting} />}
     {mode === EDIT && <Form interviewers={props.interviewers} interviewer={props.interview.interviewer.id} student={props.interview.student} onCancel={()=> back()} onSave={save}/>}
-    {mode === ERROR_DELETE && <Error/>}
-    {mode === ERROR_SAVE && <Error/> }
+    {mode === ERROR_DELETE && <Error onClose ={()=> back()}/>}
+    {mode === ERROR_SAVE && <Error onClose ={()=> back()}/> }
       
     </Fragment>
   );
