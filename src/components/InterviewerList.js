@@ -3,8 +3,9 @@ import './DayListItem.scss'
 
 import { InterviewerListItem } from "./InterviewerListItem";
 import './InterviewList.scss'
+import PropTypes from 'prop-types';
 
-export function InterviewerList(props) {
+function InterviewerList(props) {
   
   const interviewers = props.interviewers.map((data) => {
     return(
@@ -18,7 +19,6 @@ export function InterviewerList(props) {
    
   });
 
-
   return (
   <section className="interviewers">
     <h4 className="interviewers__header text--light">Interviewer</h4>
@@ -28,3 +28,9 @@ export function InterviewerList(props) {
 </section>
   )
 }
+
+InterviewerList.propTypes = {
+  interviewers: PropTypes.array.isRequired
+};
+
+export default InterviewerList;

@@ -34,14 +34,17 @@ export default function useApplicationData() {
       Friday:4
     }
   
+  
     let dayIndex= dayMapping[state.day]
-
+    
     const newDays = [
       ...state.days
     ]
 
+   
+    if(state.appointments[id].interview === null){
     newDays[dayIndex].spots-=1;
-
+    }
      return axios.put(`/api/appointments/${id}`, {interview}).then(()=> 
      console.log('this is interview', interview),
      setState({...state,appointments, days:newDays})
@@ -69,7 +72,7 @@ export default function useApplicationData() {
     }
   
     let dayIndex= dayMapping[state.day]
-    
+
     const newDays = [
       ...state.days
     ]
