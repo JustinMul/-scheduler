@@ -1,3 +1,4 @@
+//various test cases when booking an interview on the main form
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import Form from "components/Appointment/Form";

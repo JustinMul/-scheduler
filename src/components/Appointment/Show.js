@@ -1,4 +1,4 @@
-
+//this file is used to show a completed and successful appointment card on the main screen
 import React from "react";
 
 export default function Show(props) {

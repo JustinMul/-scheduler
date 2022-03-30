@@ -1,3 +1,4 @@
+//file used to test button functions primarly 
 import React from "react";
 
 import { render, cleanup, fireEvent } from "@testing-library/react";

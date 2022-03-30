@@ -1,3 +1,4 @@
+// this file is used to get apiCalls and pull data from the server. It is also used for some state management to allow for instant rendering rather than having to wait for a reload
 import { useState,useEffect } from "react";
 import axios from "axios";
 
@@ -10,8 +11,10 @@ export default function useApplicationData() {
     
   });
   
+  
   const setDay = day => setState({ ...state, day });
   
+  //used to update state to allow the number of spots remaining to update instantly when editing or creating an appointment
   function bookInterview(id, interview) {
    
     const appointment = {
@@ -49,6 +52,7 @@ export default function useApplicationData() {
      )
   }
 
+  //used to update state to allow the number of spots remaining to update instantly when deleting an appointment
   function cancelInterview (id) {
 
     const appointment = {
@@ -83,6 +87,7 @@ export default function useApplicationData() {
     })
   }
 
+  //api call to the server to get the data
   useEffect(() => {
     Promise.all([
       axios.get('http://localhost:8001/api/days'),

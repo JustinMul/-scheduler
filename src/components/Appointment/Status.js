@@ -1,3 +1,4 @@
+//this file is used to show status such as saving or deleting while the api call is running
 import React from "react";
 
 export default function Status(props) {

@@ -1,3 +1,4 @@
+// file is used to test the helper functions created in selectors.js
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 
 const state = {

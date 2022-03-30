@@ -1,4 +1,4 @@
-// this file is used to render dayList and pass props to appointment component and Dayslist component. It gets it's data from a few external functions and passes specificed data.
+// this file is used to render dayList and all appointments on screen. It gets it's data from a few external functions and passes specificed data.
 
 import React from "react";
 import "components/Application.scss";

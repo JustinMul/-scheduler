@@ -1,3 +1,4 @@
+//Test file used to check the logic of rendering the number of spots remaining
 import React from "react";
 
 import { render, cleanup } from "@testing-library/react";

@@ -1,3 +1,7 @@
+// this file is used to create a few helper functions 
+
+
+//this function is used to get all appointments for a specified day
 export function getAppointmentsForDay(state, day) {
   let appointmentArray = []
   state.days.map((dayObject) => {
@@ -13,6 +17,7 @@ export function getAppointmentsForDay(state, day) {
   return appointmentArray;
 }
 
+//this function is used to get all interviewrs for a specified day
 export function getInterviewersForDay(state, day) {
 
   let interviewerArray = []
@@ -35,7 +40,7 @@ export function getInterviewersForDay(state, day) {
 
 }
 
-
+//this function is used to get interview information for the application component
 export function getInterview(state,interview) {
 
 let interviewData = {};
