@@ -37,7 +37,18 @@ Users can book interviews by clicking on an empty slot and then a form will appe
 Once confirmed the slot will now be populated with their information and the number of remaining spots for the day decreases.
 ![image](https://user-images.githubusercontent.com/95982839/160932744-2f9f5233-6ec5-4b9d-8505-9d4d8351fb04.png)
 
-There are also a number of loading animations used during api calls to let the user know their request is being processed. 
+There are also a number of loading animations used during api calls and error screens to let the user know their request is being processed or has failed.
+
+If users want to edit or delete their requests they can simpily click the buttons that appear when hovering over their interview slot. Edits will simpliy allow the user to change any info and will have their previous information populated. 
+![image](https://user-images.githubusercontent.com/95982839/160933080-abc6a9d5-ed82-4c40-95fd-b185bc916817.png)
+
+The delete function on the other hand will require the user to confirm the deletion before allow it to happen.
+![image](https://user-images.githubusercontent.com/95982839/160933244-354fc934-e7d2-4b48-b795-f8fabe5db3ab.png)
+
+Once deleted the slot will now be free and the number of availible spots will increase once again.
+![image](https://user-images.githubusercontent.com/95982839/160933376-ca6ea811-49f7-4d51-aed4-ddd8e6bbd8b4.png)
+
+
 
 
 
