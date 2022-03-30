@@ -1,3 +1,4 @@
+//this file is used to render the side bar number of sports remaining, it gets its props from the dayList component
 import React from "react";
 import './DayListItem.scss'
 import classNames from "classnames";

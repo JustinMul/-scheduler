@@ -1,3 +1,4 @@
+//This is used to show an empty appointment slot in the interview schedule
 import React from "react";
 
 export default function Empty(props) {

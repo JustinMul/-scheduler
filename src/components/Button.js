@@ -1,3 +1,5 @@
+// this file is used to generate a button with specific actions based on the props it's passed and it's used in files such as the confirm.js and form.js files 
+
 import React from "react";
 import classNames from "classnames";
 

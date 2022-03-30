@@ -1,3 +1,4 @@
+// this file is used to create a Confirm window when a user first clicks the delete button, it's needed to prevent accidential deletion
 import React from "react";
 import Button from "components/Button";
 

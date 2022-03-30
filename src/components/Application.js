@@ -1,3 +1,5 @@
+// this file is used to render dayList and pass props to appointment component and Dayslist component. It gets it's data from a few external functions and passes specificed data.
+
 import React from "react";
 import "components/Application.scss";
 import { DayList } from "./DayList";
@@ -6,9 +8,6 @@ import { getAppointmentsForDay } from "helpers/selectors";
 import { getInterview } from "helpers/selectors";
 import { getInterviewersForDay } from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
-// import { useState } from "react";
-// import axios from "axios";
-// import { useEffect } from 'react';
 
 
 export default function Application(props) {

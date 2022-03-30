@@ -1,3 +1,5 @@
+// This file handles the flow of booking an interview. It's used to transition between items in the appointment folder.
+
 import React from "react";
 import './styles.scss';
 import Header from "./Header";

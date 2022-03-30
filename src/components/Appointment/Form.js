@@ -1,4 +1,4 @@
-
+//This is used to render the form with all of the availible inputs such as Name and the interviewer as well as a few buttons. This form can intake data and will pass to help functions.
 import InterviewerList from "components/InterviewerList";
 import Button from "components/Button";
 import React, { useState } from 'react';

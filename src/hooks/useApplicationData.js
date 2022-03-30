@@ -13,10 +13,7 @@ export default function useApplicationData() {
   const setDay = day => setState({ ...state, day });
   
   function bookInterview(id, interview) {
-    console.log(state)
-    console.log(id)
-    console.log(interview)
-
+   
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -46,7 +43,7 @@ export default function useApplicationData() {
     newDays[dayIndex].spots-=1;
     }
      return axios.put(`/api/appointments/${id}`, {interview}).then(()=> 
-     console.log('this is interview', interview),
+  
      setState({...state,appointments, days:newDays})
      
      )

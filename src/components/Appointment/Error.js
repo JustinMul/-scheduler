@@ -1,3 +1,4 @@
+// A simple error screen used to show that an create/edit/delete function has failed due to some error.
 import React from "react";
 
 export default function Error(props) {

@@ -1,3 +1,4 @@
+// This file is used to render the entire list of interviews availible for the slot
 import React from "react";
 import './DayListItem.scss'
 

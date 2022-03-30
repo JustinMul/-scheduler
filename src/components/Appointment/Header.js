@@ -1,3 +1,4 @@
+// this file displays a time above the appointment slot to indicate when you are booking the interview
 import React from "react"
 
 export default function Header(props) {

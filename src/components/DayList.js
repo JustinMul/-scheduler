@@ -1,3 +1,4 @@
+// This file is used to loop through the prop.days data and populate DaylistItem components information which will be rendered in an unordered list
 import React from "react";
 import DayListItem from "./DayListItem";
 
@@ -16,6 +17,7 @@ export function DayList (props) {
    
   });
   return (
+   
     <ul
     
     >{days}</ul>

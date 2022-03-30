@@ -1,3 +1,4 @@
+// This file is used to get the data for each specific interivewer
 import React from "react";
 import classNames from "classnames";
 import './InterviewerListItem.scss'
