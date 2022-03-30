@@ -4,23 +4,6 @@
 
 Install dependencies with `npm install`.
 
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
 ## Purpose of this project
 This project was designed to allow a user to book an interview in a specified time slot on a given day. 
 
