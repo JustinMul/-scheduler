@@ -5,7 +5,8 @@
 Install dependencies with `npm install`.
 
 ## Purpose of this project
-This project was designed simulate an interview scheduler with react. 
+
+Create an interview scheduler with React that allows users to book and cancel interviews. 
 
 ## Features 
 Upon loading this website the user will be greeted by the first day of interviews. Here the user can see all the slots, some available and some unavailable.
