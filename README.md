@@ -9,13 +9,13 @@ Install dependencies with `npm install`.
 Create an interview scheduler with React that allows users to book and cancel interviews. 
 
 ## Features 
-Upon loading this website the user will be greeted by the first day of interviews. Here the user can see all the slots, some available and some unavailable.
+Upon loading this website the user will be greeted by the first day of interviews. Here the user can see all availible and unavailble timeslots.
 ![image](https://user-images.githubusercontent.com/95982839/160932246-421e96ec-b106-4a30-8a34-0970532273bf.png)
 
-The user can navigate to different days to see what is available.
+The user can navigate to different days to see available time slots.
 ![image](https://user-images.githubusercontent.com/95982839/160932350-fbc0cb97-e220-44f6-bfef-42df0b0e7b5e.png)
 
-Users can book interviews by clicking on an empty slot and then a form will appear which can be filled out. The user must input their name and the person they are going to interview with. If the user decides to not book the interview they can cancel, or if they would like to proceed they can confirm.
+Users can book interviews by clicking on an empty slot causing a form to appear. The user must input their name and the person they are going to interview with. If the user decides to not book the interview they can cancel, or if they would like to proceed they can confirm.
 ![image](https://user-images.githubusercontent.com/95982839/160932464-e19283cd-c70f-4b9e-b793-d774b57e8ab4.png)
 
 Once confirmed, the slot will now be populated with their information and the number of remaining spots for the day decreases.
