@@ -5,7 +5,7 @@
 Install dependencies with `npm install`.
 
 ## Purpose of this project
-This project was designed to allow a user to book an interview in a specified time slot on a given day. 
+This project was designed simulate an interview scheduler with react. 
 
 ## Features 
 Upon loading this website the user will be greeted by the first day of interviews. Here the user can see all the slots, some available and some unavailable.
